@@ -33,9 +33,9 @@ class Meal {
     this.price = price;
     store.meals.push(this);
   }
+  static byPrice(){ return store.meals.sort( (a, b) => a - b ) }
   deliveries(){ return store.deliveries.filter( d => d.mealId === this.id ) }
   customers(){ return this.deliveries().map( d => d.customer() ) }
-  static byPrice(){ return store.meals.sort( (a, b) => a - b ) }
 }
 
 let deliveryId = 0;
