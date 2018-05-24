@@ -22,7 +22,7 @@ class Customer {
   }
   deliveries(){ return store.deliveries.filter( d => d.customerId === this.id ) }
   meals(){ return this.deliveries().map( d => d.meal() ) }
-  totalSpend(){ return this.meals().reduce( () => acc + m.price ) }
+  totalSpent(){ return this.meals().reduce( (sum, m) => sum + m.price ) }
 }
 
 let mealId = 0;
