@@ -44,7 +44,7 @@ class Delivery {
     this.customerId = customerId;
     store.deliveries.push(this);
   }
-  meal(){ return store.meals.filter( m => m.id === this.mealId ) }
-  customer(){ return store.customers.filter( c => c.id === this.customerId ) }
-  neighborhood(){ return store.neighborhoods.filter( n => n.id === this.neighborhoodId ) }
+  meal(){ return store.meals.find( m => m.id === this.mealId ) }
+  customer(){ return store.customers.find( c => c.id === this.customerId ) }
+  neighborhood(){ return store.neighborhoods.find( n => n.id === this.neighborhoodId ) }
 }
