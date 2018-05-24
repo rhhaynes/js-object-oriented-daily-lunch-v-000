@@ -34,7 +34,7 @@ class Meal {
     store.meals.push(this);
   }
   deliveries(){ return store.deliveries.filter( d => d.mealId === this.id ) }
-  customers(){ return }
+  customers(){ return this.deliveries().map( d => d.mealId === this.id ) }
   byPrice(){}
 }
 
