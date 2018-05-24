@@ -20,7 +20,7 @@ class Customer {
     this.neighborhoodId = neighborhoodId;
     store.customers.push(this);
   }
-  deliveries(){}
+  deliveries(){ return store.deliveries.filter( d => d.customerId === this.id ) }
   meals(){}
   totalSpend(){}
 }
