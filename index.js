@@ -7,7 +7,7 @@ class Neighborhood {
     this.name = name;
     store.neighborhoods.push(this);
   }
-  deliveries(){return store.deli}
+  deliveries(){}
   customers(){}
   meals(){}
 }
@@ -46,5 +46,5 @@ class Delivery {
   }
   meal(){ return store.meals.filter( m => m.id === this.mealId ) }
   customer(){ return store.customers.filter( c => c.id === this.customerId ) }
-  neighborhood(){ return store.neighborhoods.filter( n => n.id === this.neighborhoodId ) }
+  neighborhood(){ return store.neighborhoods.filter( n => n.id === this.neighborhoodId ) }ne
 }
