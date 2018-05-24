@@ -33,6 +33,9 @@ class Meal {
     this.price = price;
     store.meals.push(this);
   }
+  deliveries(){}
+  customers(){}
+  byPrice(){}
 }
 
 let deliveryId = 0;
